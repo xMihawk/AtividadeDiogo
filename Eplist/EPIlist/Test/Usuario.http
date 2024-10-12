@@ -1,0 +1,53 @@
+###get listar usuario
+GET http://localhost:5008/EpiList/Usuario/listar
+
+###get listar usuario id passando id /{id}
+GET http://localhost:5008/EpiList/Usuario/4
+
+###post cadastro de usuario
+POST http://localhost:5008/EpiList/Usuario/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "matheus",
+  "email": "teste@gmail.com",
+  "telefone": "(41)99056077",
+  "senha": "xxxx",
+  "cpf": "106400149xx",
+  "cargo": "supervisor",
+  "episId": [
+    7,
+    9
+  ]
+}
+
+###post PARA adicionar epi passando id /{id}
+POST http://localhost:5008/EpiList/Usuario/6/AdicionarEPIs
+Content-Type: application/json
+
+[
+  4
+]
+###Put para atualizar usuario passando id /{id}/atualizar.
+PUT http://localhost:5008/EpiList/Usuario/19Atualizar
+Content-Type: application/json
+
+{
+  "nome": "Diogo",
+  "email": "seila@gmail.com",
+  "telefone": "(41)xxxxxx",
+  "senha": "xxxxx",
+  "cpf": "xxxxxxxx",
+  "cargo": "Coordenador",
+  "equipeID": 0
+}
+###deletar usuario  passando id /{id}
+DELETE http://localhost:5008/EpiList/Usuario/Deletar/17
+
+###deletar epi do usuario  passando id do usuario/{id}/RemoverEPIs
+Put http://localhost:5008/EpiList/Usuario/21/RemoverEPIs
+Content-Type: application/json
+
+[
+  5
+]

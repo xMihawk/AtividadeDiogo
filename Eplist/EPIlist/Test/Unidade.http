@@ -1,0 +1,33 @@
+###get listar unidades------
+GET http://localhost:5008/EpiList/Unidade/listar
+
+###get id unidades-----
+GET http://localhost:5008/EpiList/Unidade/3
+
+###post cadastrar unidade
+POST http://localhost:5008/EpiList/Unidade/cadastrar
+Content-Type: application/json 
+
+{
+  "nome": "parana",
+  "usuariosId": [
+    14
+  ]
+}
+
+###post para adicionar usuario  passando id /{id}
+POST http://localhost:5008/EpiList/Unidade/AdicionarUsuario/1/3
+
+###put para atualizar  passando id /{id}
+PUT http://localhost:5008/EpiList/Unidade/1/Atualizar
+Content-Type: application/json
+
+{
+  "nome": "alfa"
+}
+
+###DELETA USUARIO DA UNIDADE passando unidade e usuario
+DELETE http://localhost:5008/EpiList/Unidade/DeletarUsuario/1/3
+
+###deletar unidade e todas equipes relacionas
+DELETE http://localhost:5008/EpiList/Unidade/DeletarUnidade/2

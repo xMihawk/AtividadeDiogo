@@ -1,0 +1,41 @@
+###Get listar equipes
+GET http://localhost:5008/EpiList/equipe/listar-equipes
+###Get listar equipe passando id-
+GET http://localhost:5008/EpiList/equipe/4
+###Post cadastrar equipe
+POST http://localhost:5008/EpiList/equipe/cadastrar
+Content-Type: application/json
+
+{
+  "nomeEquipe": "CuritibaTeam",
+  "unidadeID": 5,
+  "liderID": 21
+}
+###Post setar usuarios a equipe passando o id da equipe
+PUT  http://localhost:5008/EpiList/equipe/adicionar-usuario/5
+Content-Type: application/json
+
+[
+    19
+]
+###Post setar Lider novo a equipe passando o id da equipe e depois o id do lider
+POST http://localhost:5008/EpiList/equipe/1/adicionar-lider/1
+
+
+###put atualizar equipe passando id da equipe
+PUT http://localhost:5008/EpiList/equipe/4/atualizar
+Content-Type: application/json
+
+{
+  "nomeEquipe": "alfa"
+}
+###put atualizar a unidade da equipe passando id equipe
+PUT http://localhost:5008/EpiList/equipe/1/atualizar-unidade/2
+Content-Type: application/json
+
+2
+
+###remover lider da equipe
+DELETE http://localhost:5008/EpiList/equipe/1/remover-lider
+###deletar a equipe
+DELETE http://localhost:5008/EpiList/equipe/2/deletar

@@ -1,0 +1,28 @@
+###GET listar epi
+GET http://localhost:5008/EpiList/EPI/listar
+
+###GET EPI passando id /{id}
+GET http://localhost:5008/EpiList/EPI/7
+
+###POST DE EPI
+POST http://localhost:5008/EpiList/EPI/cadastrar
+Content-Type: application/json
+
+{
+  "descricao": "Capacete",
+  "c_A": 1019,
+  "quantidade": 5
+}
+
+###PUT ATUALIZAR EPI passando id /{id}
+PUT http://localhost:5008/EpiList/EPI/Atualizar/9
+Content-Type: application/json
+
+{
+  "descricao": "sapato",
+  "c_A": 10191,
+  "quantidade": 20
+}
+
+### DELETAR EPI passando id /{id}
+DELETE http://localhost:5008/EpiList/EPI/Deletar/6
